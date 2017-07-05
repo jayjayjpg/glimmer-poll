@@ -1,3 +1,70 @@
+/* http://www.colourlovers.com/palette/4510107/Splash */
+$grey: #313332;
+$light-grey: #454545;
+$steel: #546A81;
+$pink: #F7486F;
+$rose: #FFC1BC;
+$white: #FFF;
+
+/* http://www.colourlovers.com/palette/482774/dream_magnet */
+
+$primary-color: $light-grey;
+$secondary-color: $grey;
+$tertiary-color: $steel;
+$accent-color: $white;
+$accent-alt-color: $rose;
+
+
+$text-color: $accent-color;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $tertiary-color;
+}
+
+:host {
+  height: 400px;
+}
+
 h1 {
-  color: #444;
+  color: $text-color;
+}
+
+.bar {
+  fill: $accent-color;
+}
+
+.axis {
+  path, .tick, line {
+    stroke: $grey;
+  }
+}
+
+section {
+  position: relative;
+}
+
+.voting-form {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 550px;
+  top: 20px;
+  left: 50px;
+}
+
+.voting-form__option {
+  flex: 1;
+  cursor: pointer;
+  background-color: transparent;
+  color: $accent-color;
+  border-color: $accent-color;
+  border-width: 4px;
+  border-style: dashed;
+  display: block;
+  margin: 5px 0;
 }

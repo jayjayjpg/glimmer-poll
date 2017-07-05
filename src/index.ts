@@ -1,6 +1,7 @@
 import App from './main';
 import { ComponentManager, setPropertyDidChange } from '@glimmer/component';
 import initializeCustomElements from '@glimmer/web-component';
+import 'regenerator-runtime/runtime';
 
 const app = new App();
 const containerElement = document.getElementById('app');

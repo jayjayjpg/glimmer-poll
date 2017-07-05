@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@glimmer/application": "^0.5.1",
-    "@glimmer/application-pipeline": "^0.7.0",
+    "@glimmer/application-pipeline": "^0.7.3",
     "@glimmer/blueprint": "^0.2.1",
     "@glimmer/resolver": "^0.3.0",
     "@glimmer/web-component": "^0.2.0",
@@ -22,10 +22,26 @@
     "ember-cli-inject-live-reload": "^1.6.1",
     "ember-cli-sass": "^6.2.0",
     "ember-cli-uglify": "^1.2.0",
-    "typescript": "^2.2.2"
+    "regenerator-runtime": "^0.10.5",
+    "typescript": "^2.4.1"
   },
   "engines": {
     "node": ">= 4.0"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "@glimmer/application-pipeline": "^0.7.3",
+    "ajax-request": "^1.2.3",
+    "babel-polyfill": "^6.23.0",
+    "bufferutil": "^3.0.1",
+    "d3": "^4.9.1",
+    "jquery": "^3.2.1",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "socket.io-client": "~1.4.0",
+    "tty": "^1.0.1",
+    "utf-8-validate": "^3.0.2"
+  }
 }

@@ -1,3 +1,12 @@
-<div>
-  <h1>Welcome to Glimmer!</h1>
-</div>
+<h1>What's your favorite editor?</h1>
+<section>
+  {{#if hasNotSubmittedYet}}
+    <!-- Poll: {{fetchedPollData.id}} -->
+   <div class="voting-form">
+    {{#each fetchedPollData.polls key="@index" as |poll|}}
+         <button class="voting-form__option" onclick={{action vote poll.option}}>{{poll.option}}</button>
+    {{/each}}
+  </div>
+  {{/if}}
+  <svg width={{width}} height={{height}}></svg>
+</section>

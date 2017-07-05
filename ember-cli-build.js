@@ -1,10 +1,60 @@
 'use strict';
 
+//const require('@glimmer/application-pipeline');
+
 const GlimmerApp = require('@glimmer/application-pipeline').GlimmerApp;
+//const resolve = require('rollup-plugin-node-resolve');
+//const commonjs = require('rollup-plugin-commonjs');
+//const babel = require('rollup-plugin-babel');
+//const builtins = require('rollup-plugin-node-builtins');
+
 
 module.exports = function(defaults) {
   let app = new GlimmerApp(defaults, {
     // Add options here
+  /*  rollup: {
+      plugins: [
+        /* babel({
+          exclude: 'node_modules/**'
+        }), */
+      //  resolve({ jsnext: true, module: true, main: true }),
+      //  commonjs(),
+        // builtins()
+    //  ],
+      /* external: [
+        'child_process',
+        'crypto',
+        'events',
+        'fs',
+        'http',
+        'https',
+        'net',
+        'path',
+        'stream',
+        'tls',
+        'tty',
+        'url',
+        'util',
+        'zlib'
+      ],
+      globals: {
+        crypto: 'crypto',
+        child_process: 'child_process',
+        events: 'events',
+        fs: 'fs',
+        http: 'http',
+        https: 'https',
+        net: 'net',
+        path: 'path',
+        stream: 'stream',
+        tls: 'tls',
+        tty: 'tty',
+        url: 'url',
+        util: 'util',
+        zlib: 'zlib'
+      }, */
+
+  //  }
   });
 
   // Use `app.import` to add additional libraries to the generated
