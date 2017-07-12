@@ -1,28 +1,30 @@
 /* http://www.colourlovers.com/palette/4510107/Splash */
 $grey: #313332;
 $light-grey: #454545;
-$steel: #546A81;
+$steel: #838787;
 $pink: #F7486F;
 $rose: #FFC1BC;
 $white: #FFF;
+$dark-blue: #013565;
+$orange: #F98354;
 
 /* http://www.colourlovers.com/palette/482774/dream_magnet */
 
-$primary-color: $light-grey;
-$secondary-color: $grey;
+$primary-color: $white;
+$secondary-color: $dark-blue;
 $tertiary-color: $steel;
-$accent-color: $white;
+$accent-color: $orange;
 $accent-alt-color: $rose;
 
 
-$text-color: $accent-color;
+$text-color: $secondary-color;
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: $tertiary-color;
+  background-color: $primary-color;
 }
 
 :host {
@@ -54,7 +56,7 @@ section {
   justify-content: space-around;
   height: 550px;
   top: 20px;
-  left: 50px;
+  left: 160px;
 }
 
 .voting-form__option {

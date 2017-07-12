@@ -12,7 +12,7 @@ export default class GlimmerPoll extends Component {
   @tracked
   hasNotSubmittedYet: boolean = true;
 
-  margin = { top: 20, right: 20, bottom: 30, left: 40 };
+  margin = { top: 20, right: 20, bottom: 30, left: 150 };
 
   rangeWidth = this.width - this.margin.left - this.margin.right;
   rangeHeight = this.height - this.margin.top - this.margin.bottom;
@@ -58,7 +58,7 @@ export default class GlimmerPoll extends Component {
       this.subscribers.forEach((callback) => callback(message)); */
       fetchData(this.apiUrl)
         .then((res) => {
-           this.fetchedPollData = res.data[1];
+           this.fetchedPollData = res.data[0];
            this.renderPoll();
            this.update();
          });
@@ -82,12 +82,15 @@ export default class GlimmerPoll extends Component {
         .attr("class", "container");
 
 	  y.domain(data.map((d) => { return d.option; }));
-	  x.domain([0, d3.max(data, (d) => { return d.vote; })]);
+	  x.domain([0, d3.max(data, (d) => {
+        return d.vote;
+      })
+    ]);
 
     g.append('g')
      .attr('class', 'axis axis--x')
      .attr('transform', 'translate(0,' + height + ')')
-		  .call(d3.axisBottom(x));
+		 .call(d3.axisBottom(x).ticks());
 
     g.append('g')
       .attr('class', 'axis axis--y')
@@ -101,8 +104,8 @@ export default class GlimmerPoll extends Component {
   }
 
   update() {
-    console.log("update");
-    console.log(this.fetchedPollData.polls);
+  //  console.log("update");
+  //  console.log(this.fetchedPollData.polls);
     const svg = d3.select('svg');
     const margin = this.margin;
     const width = this.rangeWidth;
@@ -156,7 +159,7 @@ export default class GlimmerPoll extends Component {
      }).then(async (res) => {
        await fetchData(this.apiUrl)
          .then((res) => {
-           this.fetchedPollData = res.data[1];
+           this.fetchedPollData = res.data[0];
            this.update();
        });
      });
